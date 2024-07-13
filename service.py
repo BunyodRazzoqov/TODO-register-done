@@ -45,11 +45,9 @@ def login_check():
     password = input('Enter your password: ')
     response = login(username, password)
     if response.status_code == 200:
-        print_success('True')
         print_success(response.data)
 
     else:
-        print_fail('False')
         print_fail(response.data)
 
 
